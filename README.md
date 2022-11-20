@@ -23,5 +23,12 @@ We shall be using following Steps/Aproach to generate the databuild
 
 Data cleaning-->Data modeling-->Visualisation of Data-->Feature Scaling-->Build a predictive model-->Evaluate the model
 
+
+
 **Model summary**
 
+A neuron is designed to be activated based on the information it is getting from the previous layer. And with each layer, the complexity of the data captured by the network increases. Thus, we can consider the number of neurons and the number of layers to be hyper-parameters and we tune them(increasing/decresing the number of neurons/layers) based on the results we observe. We would tend to increase the number of layers/neurons if we observe that the model is underfitting the validation data. Similarly, we would tend to decrease the number of layers/neurons if we observe that the model is overfitting the validation data. So basically, we train on the train data, tune the hyper-parameters based on the performance on the validation data, and finally check the model performance on the test data.
+
+**Inference**
+
+GRU uses less memory and is faster than LSTM, however, LSTM is more accurate when using datasets with longer sequences.However the Model 
