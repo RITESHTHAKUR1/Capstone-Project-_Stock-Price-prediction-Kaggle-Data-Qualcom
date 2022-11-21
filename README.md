@@ -1,4 +1,5 @@
-# Capstone-Project-_Stock-Price-prediction-Kaggle-Data-Qualcom
+# Capstone-Project-_Stock-Price-prediction-Kaggle-Data-Qualcomm
+
 Stock Closing Price Prediction using Deep Learning, TensorFlow2 &amp; Keras
 
 **INTRODUCTION**
