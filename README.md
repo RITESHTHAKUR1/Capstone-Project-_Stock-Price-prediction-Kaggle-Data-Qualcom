@@ -28,8 +28,28 @@ Data cleaning-->Data modeling-->Visualisation of Data-->Feature Scaling-->Build 
 
 **Model summary**
 
-A neuron is designed to be activated based on the information it is getting from the previous layer. And with each layer, the complexity of the data captured by the network increases. Thus, we can consider the number of neurons and the number of layers to be hyper-parameters and we tune them(increasing/decresing the number of neurons/layers) based on the results we observe. We would tend to increase the number of layers/neurons if we observe that the model is underfitting the validation data. Similarly, we would tend to decrease the number of layers/neurons if we observe that the model is overfitting the validation data. So basically, we train on the train data, tune the hyper-parameters based on the performance on the validation data, and finally check the model performance on the test data.
+The model we used is a stacked GRU. So the output of one GRU layer acted as the input to the next GRU layer stacked above the former one and so on. The GRU/LSTM layers in Keras expect the input to be in three-dimensional. Thus, we have to make sure that the output from a previous layer is formatted in a three-dimensional way so as to provide it as input to the next layer. This job could be achieved by setting return_sequences=True in the GRU layers whose output would potentially act as the input to the next GRU layer.
+
+model architecture.
+
+Total params: 220,301
+Trainable params: 220,301
+Non-trainable params: 0
+
+model score
+Train Score:
+MSE: 0.00026 , RMSE: 0.02
+Validation Score:
+MSE: 0.00142 , RMSE: 0.04
+Test Score:
+MSE: 0.02870 , RMSE: 0.17
 
 **Inference**
 
-GRU uses less memory and is faster than LSTM, however, LSTM is more accurate when using datasets with longer sequences.However the Model 
+GRU uses less memory and is faster than LSTM, however, LSTM is more accurate when using datasets with longer sequences.
+A neuron is designed to be activated based on the information it is getting from the previous layer. And with each layer, the complexity of the data captured by the network increases. Thus, we can consider the number of neurons and the number of layers to be hyper-parameters and we tune them(increasing/decresing the number of neurons/layers) based on the results we observe. We would tend to increase the number of layers/neurons if we observe that the model is underfitting the validation data. Similarly, we would tend to decrease the number of layers/neurons if we observe that the model is overfitting the validation data. So basically, we train on the train data, tune the hyper-parameters based on the performance on the validation data, and finally check the model performance on the test data.
+
+**References**
+
+cloudxlab repositery
+Kaggle 
